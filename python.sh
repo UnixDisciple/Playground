@@ -183,7 +183,7 @@ HERE
       ;;
 
     act|activate) . .venv/bin/activate ;;
-    *) { usage; pushd; return 1; } ;;
+    *) { usage; popd; return 1; } ;;
   esac \
      && (( ${ACTIVATE} )) && py::venv activate # only attempt activate if good case
 
